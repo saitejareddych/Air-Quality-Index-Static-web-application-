@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Marker Animations</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+	<a href="javascript:toggleBounce()">link</a>
+    <script>
+
+      // The following example creates a marker in Stockholm, Sweden using a DROP
+      // animation. Clicking on the marker will toggle the animation between a BOUNCE
+      // animation and no animation.
+
+      var marker5;
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 29.912734, lng: 73.875664}
+        });
+
+        var symbolOne = {
+        path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
+        strokeColor: '#900C3F',
+          fillColor: '#900C3F',
+		fillOpacity: 4,
+        scale:0.8,
+		labelOrigin: new google.maps.Point(0,-25), 
+        };
+		var symbol2 = {
+		  path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
+          strokeColor: '#FF5733',
+          fillColor: '#FF5733',
+          fillOpacity: 4,
+		  scale:0.8,
+		  labelOrigin: new google.maps.Point(0,-25),
+        };
+	
+var shivCircle = {lat: 29.912734,lng:  73.875664};
+var chachalChowk = {lat: 29.909603, lng:  73.880093};
+var ambikaCity = {lat: 29.913067, lng:  73.851039};
+var birbalChowk = {lat: 29.926797, lng:  73.875105};
+var sadhuwali = {lat: 29.936555, lng:  73.879276};
+	var marker1 = new google.maps.Marker({
+										position: shivCircle,
+										icon:symbolOne,
+										animation: google.maps.Animation.DROP,	
+										map: map,
+										title: 'Place: Shiv Circle\nPM 2.5: 259\n PM 10: 602\n CO2: -\nTemperatire: 13C\nHumidity: 57%',
+										label: {
+										text: '1',
+										color: 'black',
+										fontWeight: "bold",
+												}
+										});
+										
+		var	marker2 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: chachalChowk,
+			  map: map,
+			  
+			  title: '\nPlace: Chachal Chowk\t\t\t\n\nPM 2.5: 221\n\n PM 10: 681\n\n CO2: -\n\nTemperatire: 13C\n\nHumidity: 58%',
+			   label: {
+						text: '2',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+		var	marker3 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: ambikaCity,
+			  map: map,
+			  title: 'Place: Ambika City\nPM 2.5: 201\n PM 10: 538\n CO2: -\nTemperatire: 16C\nHumidity: 49%',
+			   label: {
+						text: '3',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			var marker4 = new google.maps.Marker({
+			icon:symbolOne,
+			animation: google.maps.Animation.DROP,
+			  position: birbalChowk,
+			  map: map,
+			  title: 'Place: Birbal Chowk\nPM 2.5: 270\n PM 10: 499\n CO2: -\nTemperatire: 15C\nHumidity: 51%',
+			   label: {
+						text: '4',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+			
+			
+			
+			
+			marker = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: sadhuwali,
+			
+			  map: map,
+			  title: 'Place: SadhuWali\nPM 2.5: 186\n PM 10: 394\n CO2: -\nTemperatire: 15C\nHumidity: 49%',
+			   label: {
+						text: '5',
+						color: 'black',
+						fontWeight: "bold",
+						
+	  }
+			});
+			
+			marker.addListener('click', toggleBounce);	
+      }
+
+      function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwpawMnfC385gEYYu8ZOP-9t4bmtkO65U&callback=initMap">
+    </script>
+  </body>
+</html>
