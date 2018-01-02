@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+    $('#SadhuWali').click(function(){
+        $('html,body').scrollTop(250);
+    });
+});
+</script>
+<script>
+	$(document).ready(function(){
+    $('#shivCircle').click(function(){
+        $('html,body').scrollTop(250);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#chachalChowk').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#ambikaCity').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#birbalChowk').click(function(){
+        $('html,body').scrollTop(500);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#ridhiSidhi').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#sukhadiaCircle').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#orbitResort').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#homeland').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#khalsaCollege').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#busStand').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#railway').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#BDIS').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $('#aatamValabhJainCollege').click(function(){
+        $('html,body').scrollTop(0);
+    });
+});
+	</script>
+<div id="map" style="width: 100%; height: 600px; background: yellow;"></div>
+<script>
+      var marker5;
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 29.912734, lng: 73.875664}
+        });
+        var symbolOne = {
+        path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
+        strokeColor: '#900C3F',
+          fillColor: '#900C3F',
+		fillOpacity: 4,
+        scale:0.8,
+		labelOrigin: new google.maps.Point(0,-25), 
+        };
+		var symbol2 = {
+		  path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
+          strokeColor: '#FF5733',
+          fillColor: '#FF5733',
+          fillOpacity: 4,
+		  scale:0.8,
+		  labelOrigin: new google.maps.Point(0,-25),
+        };
+	
+var shivCircle = {lat: 29.912734,lng:  73.875664};
+var chachalChowk = {lat: 29.909603, lng:  73.880093};
+var ambikaCity = {lat: 29.913067, lng:  73.851039};
+var birbalChowk = {lat: 29.926797, lng:  73.875105};
+var sadhuwali = {lat: 29.936555, lng:  73.879276};
+var ridhiSidhi = {lat: 29.936555, lng: 73.899586};
+var sukhadiaCircle = {lat: 29.918421, lng: 73.875344};
+var orbitResort = {lat: 29.893562, lng: 73.875625};
+var homeland = {lat: 29.878368, lng: 73.877659};
+var khalsaCollege = {lat: 29.938673, lng: 73.864573};
+var busStand = {lat: 29.923903, lng: 73.863509};
+var railway = {lat: 29.931690, lng: 73.871912};
+var BDIS = {lat: 29.888495, lng: 73.916432};
+var aatamValabhJainCollege = {lat: 29.898483, lng: 73.894842};
+
+	 marker1 = new google.maps.Marker({
+										position: shivCircle,
+										icon:symbolOne,
+										animation: google.maps.Animation.DROP,	
+										map: map,
+										label: {
+										text: '5',
+										color: 'black',
+										fontWeight: "bold",
+												}
+										});
+										
+										
+										
+			marker2 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: chachalChowk,
+			  map: map,
+			  
+			  label: {
+						text: '4',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+			marker3 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: ambikaCity,
+			  map: map,
+			   label: {
+						text: '11',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			 marker4 = new google.maps.Marker({
+			icon:symbolOne,
+			animation: google.maps.Animation.DROP,
+			  position: birbalChowk,
+			  map: map,
+			   label: {
+						text: '8',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+			marker = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: sadhuwali,
+			  map: map,
+			   label: {
+						text: '14',
+						color: 'black',
+						fontWeight: "bold",		
+					}
+			}),
+			infowindow = new google.maps.InfoWindow({
+           content: "<div><p>Place: Shiv Circle</p> <br><p> PM 2.5 : 259</p></div>"
+			});
+			
+			marker6 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: ridhiSidhi,
+			  map: map,
+			   label: {
+						text: '2',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+				marker7 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: sukhadiaCircle,
+			  map: map,
+			  label: {
+						text: '6',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+				marker8 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: orbitResort,
+			  map: map,
+			   label: {
+						text: '13',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+				marker9 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: homeland,
+			  map: map,
+			   label: {
+						text: '12',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+				marker10 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: khalsaCollege,
+			  map: map,
+			   label: {
+						text: '15',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+				marker11 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: busStand,
+			  map: map,
+			   label: {
+						text: '10',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			
+				marker12 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: railway,
+			  map: map,
+			   label: {
+						text: '9',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			marker13 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: BDIS,
+			  map: map,
+			   label: {
+						text: '1',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			marker14 = new google.maps.Marker({
+			icon:symbol2,
+			animation: google.maps.Animation.DROP,
+			  position: aatamValabhJainCollege,
+			  map: map,
+			   label: {
+						text: '3',
+						color: 'black',
+						fontWeight: "bold",
+	  }
+			});
+			google.maps.event.addListener(marker1, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker1.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceSC, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Shiv Circle</h2>'+
+															'<p><span id="label">PM 2.5:</span> 259</p>'+
+															'<p><span id="label">PM 10:</span> 602</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 57%</p>'
+															+"</div>");
+        infowindow.open(map, marker1);
+    });
+	google.maps.event.addListener(marker2, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker2.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceCC, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Chachal Chowk</h2>'+
+															'<p><span id="label">PM 2.5:</span> 221</p>'+
+															'<p><span id="label">PM 10:</span> 681</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 58%</p>'
+															+"</div>");
+        infowindow.open(map, marker2);
+    });
+	google.maps.event.addListener(marker3, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker3.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceAC, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Ambika City</h2>'+
+															'<p><span id="label">PM 2.5:</span> 201</p>'+
+															'<p><span id="label">PM 10:</span> 538</p>'+
+															'<p><span id="label">Temperature:</span> 16C</p>'+
+															'<p><span id="label">Humidity:</span> 49%</p>'
+															+"</div>");
+        infowindow.open(map, marker3);
+    });
+	google.maps.event.addListener(marker4, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker4.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceBC, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Birbal Chowk</h2>'+
+															'<p><span id="label">PM 2.5:</span> 270</p>'+
+															'<p><span id="label">PM 10:</span> 499</p>'+
+															'<p><span id="label">Temperature:</span> 15C</p>'+
+															'<p><span id="label">Humidity:</span> 51%</p>'
+															+"</div>");
+        infowindow.open(map, marker4);
+    });
+	google.maps.event.addListener(marker, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceSW, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Sadhu Wali</h2>'+
+															'<p><span id="label">PM 2.5:</span> 186</p>'+
+															'<p><span id="label">PM 10:</span> 394</p>'+
+															'<p><span id="label">Temperature:</span> 15C</p>'+
+															'<p><span id="label">Humidity:</span> 49%</p>'
+															+"</div>");
+        infowindow.open(map, marker);
+    });
+	
+		google.maps.event.addListener(marker6, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker6.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceRS, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Ridhi Sidhi Colony</h2>'+
+															'<p><span id="label">PM 2.5:</span> 184</p>'+
+															'<p><span id="label">PM 10:</span> 442</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 57%</p>'
+															+"</div>");
+        infowindow.open(map, marker6);
+		});
+		google.maps.event.addListener(marker7, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker7.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceSU, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Sukhadia Circle</h2>'+
+															'<p><span id="label">PM 2.5:</span> 153</p>'+
+															'<p><span id="label">PM 10:</span> 300</p>'+
+															'<p><span id="label">Temperature:</span> 17C</p>'+
+															'<p><span id="label">Humidity:</span> 44%</p>'
+															+"</div>");
+        infowindow.open(map, marker7);
+		});
+	google.maps.event.addListener(marker8, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker8.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceOR, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Orbit Resort</h2>'+
+															'<p><span id="label">PM 2.5:</span> 260</p>'+
+															'<p><span id="label">PM 10:</span> 520</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 56%</p>'
+															+"</div>");
+        infowindow.open(map, marker8);
+		});
+		google.maps.event.addListener(marker9, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker9.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceHL, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Home Land City</h2>'+
+															'<p><span id="label">PM 2.5:</span> 144</p>'+
+															'<p><span id="label">PM 10:</span> 460</p>'+
+															'<p><span id="label">Temperature:</span> 14C</p>'+
+															'<p><span id="label">Humidity:</span> 54%</p>'
+															+"</div>");
+        infowindow.open(map, marker9);
+		});
+		google.maps.event.addListener(marker10, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker10.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceKC, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Khalsa College</h2>'+
+															'<p><span id="label">PM 2.5:</span> 150</p>'+
+															'<p><span id="label">PM 10:</span> 366</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 60%</p>'
+															+"</div>");
+        infowindow.open(map, marker10);
+		});
+		google.maps.event.addListener(marker11, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker11.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceBS, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Bus Stand</h2>'+
+															'<p><span id="label">PM 2.5:</span> 157</p>'+
+															'<p><span id="label">PM 10:</span> 300</p>'+
+															'<p><span id="label">Temperature:</span> 16C</p>'+
+															'<p><span id="label">Humidity:</span> 51%</p>'
+															+"</div>");
+        infowindow.open(map, marker11);
+		});
+		google.maps.event.addListener(marker12, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker12.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceRW, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Railway Station</h2>'+
+															'<p><span id="label">PM 2.5:</span> 159</p>'+
+															'<p><span id="label">PM 10:</span> 366</p>'+
+															'<p><span id="label">Temperature:</span> 15C</p>'+
+															'<p><span id="label">Humidity:</span> 57%</p>'
+															+"</div>");
+        infowindow.open(map, marker12);
+		});
+		google.maps.event.addListener(marker13, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker13.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceBDIS, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">BDIS</h2>'+
+															'<p><span id="label">PM 2.5:</span> 123</p>'+
+															'<p><span id="label">PM 10:</span> 279</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 62%</p>'
+															+"</div>");
+        infowindow.open(map, marker14);
+		});
+		google.maps.event.addListener(marker14, 'click', function(){
+        infowindow.close(); // Close previously opened infowindow
+		marker14.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(toggleBounceAV, 3000);
+        infowindow.setContent( "<div id='infowindow'>"+ '<h2 id="place">Aatam Valabh Jain College</h2>'+
+															'<p><span id="label">PM 2.5:</span> 227</p>'+
+															'<p><span id="label">PM 10:</span> 663</p>'+
+															'<p><span id="label">Temperature:</span> 13C</p>'+
+															'<p><span id="label">Humidity:</span> 58%</p>'
+															+"</div>");
+        infowindow.open(map, marker14);
+		});
+		
+      }
+      function toggleBounceSW() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceSW, 3000);
+        }
+      }
+	  function toggleBounceSC() {
+        if (marker1.getAnimation() !== null) {
+          marker1.setAnimation(null);
+        } else {
+          marker1.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(toggleBounceSC, 3000);
+        }
+      }
+	   function toggleBounceCC() {
+        if (marker2.getAnimation() !== null) {
+          marker2.setAnimation(null);
+        } else {
+          marker2.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceCC, 3000);
+        }
+      }
+	  function toggleBounceAC() {
+        if (marker3.getAnimation() !== null) {
+          marker3.setAnimation(null);
+        } else {
+          marker3.setAnimation(google.maps.Animation.BOUNCE);
+		 
+        setTimeout(toggleBounceAC, 3000);
+        }
+      }
+	  function toggleBounceBC() {
+        if (marker4.getAnimation() !== null) {
+          marker4.setAnimation(null);
+        } else {
+          marker4.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceBC, 3000);
+        }
+      }
+	  function toggleBounceRS() {
+        if (marker6.getAnimation() !== null) {
+          marker6.setAnimation(null);
+        } else {
+          marker6.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceRS, 3000);
+        }
+      }
+	  function toggleBounceSU() {
+        if (marker7.getAnimation() !== null) {
+          marker7.setAnimation(null);
+        } else {
+          marker7.setAnimation(google.maps.Animation.BOUNCE);
+		 
+        setTimeout(toggleBounceSU, 3000);
+        }
+      }
+	  function toggleBounceOR() {
+        if (marker8.getAnimation() !== null) {
+          marker8.setAnimation(null);
+        } else {
+          marker8.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceOR, 3000);
+        }
+      }
+	  function toggleBounceHL() {
+        if (marker9.getAnimation() !== null) {
+          marker9.setAnimation(null);
+        } else {
+          marker9.setAnimation(google.maps.Animation.BOUNCE);
+		 
+        setTimeout(toggleBounceHL, 3000);
+        }
+      }
+	  function toggleBounceKC() {
+        if (marker10.getAnimation() !== null) {
+          marker10.setAnimation(null);
+        } else {
+          marker10.setAnimation(google.maps.Animation.BOUNCE);
+		 
+        setTimeout(toggleBounceKC, 3000);
+        }
+      }
+	   function toggleBounceBS() {
+        if (marker11.getAnimation() !== null) {
+          marker11.setAnimation(null);
+        } else {
+          marker11.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceBS, 3000);
+        }
+      }
+	  function toggleBounceRW() {
+        if (marker12.getAnimation() !== null) {
+          marker12.setAnimation(null);
+        } else {
+          marker12.setAnimation(google.maps.Animation.BOUNCE);
+		 
+        setTimeout(toggleBounceRW, 3000);
+        }
+      }
+	  function toggleBounceBDIS() {
+        if (marker13.getAnimation() !== null) {
+          marker13.setAnimation(null);
+        } else {
+          marker13.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceBDIS, 3000);
+        }
+      }
+	   function toggleBounceAV() {
+        if (marker14.getAnimation() !== null) {
+          marker14.setAnimation(null);
+        } else {
+          marker14.setAnimation(google.maps.Animation.BOUNCE);
+		  
+        setTimeout(toggleBounceAV, 3000);
+        }
+      }
+	  
+    </script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwpawMnfC385gEYYu8ZOP-9t4bmtkO65U&callback=initMap">
+    </script>
+
+<style>
+p{
+font-size:15px;
+font-weight:italic;
+color:#900C3F;
+}
+#infowindow{
+
+margin:0;
+padding:0;
+}
+#label{
+color:#C70039;
+font-weight:bold;
+}
+#place{
+color:#036;
+font-weight:bold;
+}
+</style>
+<table border="1" width="100%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="width: 94%;" colspan="7" height="25">These Values are main roads of following locations noted by Air Veda Monitor.</td>
+</tr>
+<tr>
+<td style="width: 94%;" colspan="7" height="25">December 01, 2017 6:00 PM To 8:00 PM</td>
+</tr>
+<tr>
+<td style="width: 9%;">S. No.</td>
+<td style="width: 23%;">Place Name</td>
+<td style="width: 11%;">PM 2.5</td>
+<td style="width: 12.171%;">PM 10</td>
+<td style="width: 11.829%;">CO2</td>
+<td style="width: 14%;">Temperature</td>
+<td style="width: 13%;">Humidity</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">1</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceBDIS()" id="BDIS">BDIS</a></td>
+<td style="width: 11%;">123</td>
+<td style="width: 12.171%;">279</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">62%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">2</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceRS()" id="ridhiSidhi">Ridhi Sidhi Colony</a></td>
+<td style="width: 11%;">184</td>
+<td style="width: 12.171%;">422</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">57%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">3</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceAV()" id="aatamValabhJainCollege">Aatam Valabh Jain College</a></td>
+<td style="width: 11%;">227</td>
+<td style="width: 12.171%;">663</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">58%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">4</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceCC()" id="chachalChowk">Chachal Chowk</a></td>
+<td style="width: 11%;">221</td>
+<td style="width: 12.171%;">681</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">58%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">5</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceSC()" id="shivCircle">Shiv Circle</a></td>
+<td style="width: 11%;">259</td>
+<td style="width: 12.171%;">602</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">57%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">6</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceSU()" id="sukhadiaCircle">Sukhadia Circle</a></td>
+<td style="width: 11%;">153</td>
+<td style="width: 12.171%;">300</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">17˚C</td>
+<td style="width: 13%;">44%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">7</td>
+<td style="width: 23%;">Weather Office</td>
+<td style="width: 11%;">157</td>
+<td style="width: 12.171%;">323</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">18˚C</td>
+<td style="width: 13%;">42%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">8</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceBC()" id="birbalChowk">Birbal Chowk</a></td>
+<td style="width: 11%;">270</td>
+<td style="width: 12.171%;">499</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">15˚C</td>
+<td style="width: 13%;">51%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">9</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceRW()" id="railway">Railway Station</a></td>
+<td style="width: 11%;">169</td>
+<td style="width: 12.171%;">336</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">15˚C</td>
+<td style="width: 13%;">57%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">10</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceBS()" id="busStand">Bus Stand</a></td>
+<td style="width: 11%;">157</td>
+<td style="width: 12.171%;">300</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">16˚C</td>
+<td style="width: 13%;">51%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">11</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceAC()" id="ambikaCity">Ambika City</a></td>
+<td style="width: 11%;">201</td>
+<td style="width: 12.171%;">538</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">16˚C</td>
+<td style="width: 13%;">49%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">12</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceHL()" id="homeland">Home Land City</a></td>
+<td style="width: 11%;">144</td>
+<td style="width: 12.171%;">460</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">14˚C</td>
+<td style="width: 13%;">54%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">13</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceOR()" id="orbitResort">Orbit Resort</a></td>
+<td style="width: 11%;">260</td>
+<td style="width: 12.171%;">510</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">56%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="20">14</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceSW()" id="SadhuWali">SadhuWali</a></td>
+<td style="width: 11%;">186</td>
+<td style="width: 12.171%;">394</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">15˚C</td>
+<td style="width: 13%;">49%</td>
+</tr>
+<tr>
+<td style="width: 9%;" height="21">15</td>
+<td style="width: 23%;"><a href="javascript:toggleBounceKC()" id="khalsaCollege">Khalsa College</a></td>
+<td style="width: 11%;">150</td>
+<td style="width: 12.171%;">366</td>
+<td style="width: 11.829%;">-</td>
+<td style="width: 14%;">13˚C</td>
+<td style="width: 13%;">60%</td>
+</tr>
+<tr>
+<td style="width: 94%;" colspan="7">"Values of PM 2.5 are +150 and PM 10 are +300 for local and surrounding location of Sri Ganganagar."</td>
+</tr>
+</tbody>
+</table>
+
+</head>
+</html>
